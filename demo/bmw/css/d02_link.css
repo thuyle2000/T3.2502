@@ -1,0 +1,50 @@
+/* khai bao css cho file d02_link.html */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 5px;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    color: orchid;
+    text-decoration: underline;
+}
+
+img.logo {
+    width: 150px;
+    height: 50px;
+    border: medium solid lightpink;
+    padding: 5px 15px;
+    margin: 10px;
+}
+
+.cafe {
+    width: 50%;
+    padding: 10PX;
+    margin: 10px;
+    box-shadow: 3px 3px 3px #888888;
+    border: 1px solid #888888;
+}
+
+
+#menu>li {
+    display: inline;
+    padding: 10px;
+}

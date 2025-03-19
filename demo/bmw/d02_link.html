@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyperlink-demo</title>
+    <link rel="stylesheet" href="css/d02_link.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h2>HTML HyperLink Demo</h2>
+    <hr>
+    <div>
+        <p>Content</p>
+        <ul>
+            <li><a href="#external">External Link</a></li>
+            <li><a href="#internal">Internal Link</a></li>
+            <li><a href="#email">Email Link</a> </li>
+            <li><a href="#phone">Phone Link</a></li>
+            <li><a href="#other">Other Content Link</a></li>
+        </ul>
+    </div>
+    <h3 id="external">Absolute Paths (External Links)</h3>
+    <ul>
+        <li><a href="https://vnexpress.net/" target="_blank">Doc bao moi ngay</a></li>
+        <li><a href="https://www.nhaccuatui.com/" target="_blank">Nghe nhac thu gian</a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">Hoc thiet ke web</a></li>
+    </ul>
+
+    <ul id="menu">
+        <li><a href="https://vnexpress.net/">
+                <img src="images/logo-vnexpress.svg" alt="vnexpress" class="logo">
+            </a>
+            </a>
+
+        </li>
+        <li><a href="https://www.nhaccuatui.com/">
+                <img src="images/logo-nct.png" alt="nhaccuatui" class="logo">
+            </a>
+            </a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp">
+                <img src="images/logo-w3school.png" alt="w3schools" class="logo">
+            </a>
+            </a></li>
+    </ul>
+
+    <div>
+        <img src="images/cafe.png" alt="cafe cua Huy" class="cafe" /> <br>
+         Hinh ly cafe cua Huy.
+    </div>
+
+
+    <h3 id="internal">Relative Paths (Internal Links)</h3>
+    <ul>
+        <li><a href="d02_link.html">Home</a></li>
+        <li><a href="d01_format.html">Format demo</a></li>
+        <li><a href="d01_list.html">List demo</a></li>
+        <li><a href="sample.html">Sample demo</a></li>
+    </ul>
+
+    <h3 id="email">Email Link</h3>
+    <a href="mailto:ticaca@gmail.com?subject=thac mac biet hoi ai">
+        <i class="fa fa-envelope" style="font-size:36px"></i> Email to me
+    </a>
+
+    <h3 id="phone">Phone Link</h3>
+    <a href="tel:+84901234567">
+        <i class="fa fa-phone" style="font-size:36px"></i> Call me
+    </a>
+
+    <h3 id="other">Other Content Type Link</h3>
+    <a href="resources.zip">Resources For Study</a>
+</body>
+</body>
+
+</html>

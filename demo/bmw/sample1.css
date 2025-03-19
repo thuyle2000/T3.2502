@@ -1,0 +1,18 @@
+body {
+	color: blue;
+	font-size: 1.2em;
+	font-family: "arial";
+	margin:20px;
+}
+
+
+a{
+	font-style:italic;
+	text-decoration:none;
+	color: red;
+}
+
+img{
+	width: 30%;
+	border-radius:10px;
+}
