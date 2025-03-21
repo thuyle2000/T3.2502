@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-priority</title>
+
+    <!-- external CSS -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <!-- internal CSS -->
+     <style>
+        /* type selector: p, h3 */
+        p{
+            padding: 10px;
+            margin: 5px;
+            color: black;
+        }
+
+        p::first-letter{
+            font-size: 1.5em;
+            color: blueviolet;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h3{
+            color: green;
+        }
+
+        /* class selector */
+        .hot{
+            color: red;
+        }
+        .cold{
+            color: blue;
+        }
+
+        /* id selector */
+        #heading{
+            color: lightseagreen;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            text-align: center;
+            text-shadow: 1px 1px 1px gray;
+            font-weight: bold;
+        }
+
+
+        h3{
+            color: salmon;
+        }
+
+        h3:hover{
+            color: yellow;
+            background-color: green;
+            width: fit-content;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+     </style>
+
+</head>
+
+<body>
+    <h2>Demo CSS Priority</h2>
+    <hr>
+    <!-- doan 1 -->
+     <h3>Paragraph 1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi officiis exercitationem facilis illum in amet
+        laboriosam corporis omnis, reprehenderit animi officia voluptatibus quidem hic blanditiis vero, iste repellat!
+        Molestias, nesciunt?</p>
+
+    <!-- doan 2 -->
+    <h3>Paragraph 2</h3>
+    <p  class="cold"  id="heading" style="color: whitesmoke; background-color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos cumque nulla cupiditate repellendus eum unde
+        nisi. Quia alias blanditiis, atque suscipit, aperiam quae laborum voluptates iusto, pariatur iure earum eum?</p>
+
+
+    <!-- doan 3 -->
+    <h3>Paragraph 3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsa repellat, earum ipsam repellendus tempora
+        odio architecto? Magni veniam unde quibusdam, molestiae veritatis quos aspernatur nesciunt laboriosam ipsa optio
+        esse!</p>
+
+    <!-- doan 4 -->
+    <h3>Paragraph 4</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor corrupti quis excepturi neque. Nemo beatae itaque
+        eos quas asperiores quidem atque, at deserunt labore architecto doloribus fuga tempora magni quasi?</p>
+
+    <!-- doan 5 -->
+     <h3>Paragraph 5</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas rerum rem, quos cumque natus, ex deserunt,
+        voluptates sit ipsam architecto beatae vero aliquid eum? Explicabo earum enim provident beatae nihil!</p>
+
+</body>
+
+</html>
