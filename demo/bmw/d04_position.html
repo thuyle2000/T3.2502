@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .hot {
+            width: 200px;
+            height: 250px;
+            background-color: red;
+            color: white;
+            position: relative;
+            top: 150px;
+            left: 50px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .cold {
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            top: 200px;
+            left: 120px;
+
+            background-color: yellow;
+            color: black;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .fix {
+            position: fixed;
+            z-index: 1;
+            width: 100vw;
+            top: 10px;
+            left: 10px;
+
+            background-color: greenyellow;
+            color: black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fix">
+        <h2>CSS3 Position Demo - fixed position</h2>
+    </div>
+
+    <div class="hot">relative position</div>
+    <div class="hot">relative position</div>
+
+    <div class="cold">absolute position</div>
+
+
+
+</body>
+
+</html>
