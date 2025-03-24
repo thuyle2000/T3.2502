@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Transition</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <style>
+        figure {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        figure img {
+            width: 12vw;
+            height: 12vw;
+            border: 10px groove lightgrey;
+            margin: 10px 1px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: transform 1.5s;
+        }
+
+        figure img:hover {
+            transform: scale(0.8);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>CSS3 Transition Demo</h2>
+    <hr>
+    <div>
+        <h3>Hover over the image to see the transition effect</h3>
+        <figure>
+            <img src="images/rose1.webp" alt="hoa hong">
+            <img src="images/rose2.webp" alt="hoa hong" >
+            <img src="images/rose3.png" alt="hoa hong" >
+            <img src="images/rose4.png" alt="hoa hong" >
+            
+        </figure>
+    </div>
+</body>
+</html>
