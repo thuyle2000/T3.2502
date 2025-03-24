@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "header header" 
+            "nav nav" 
+            "section aside" 
+            "footer footer";
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        section {
+            grid-area: section;
+            background-color: lightyellow;
+            padding: 10px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Layout Demo</h2>
+    <hr>
+    <div class="container">
+        <header>
+            LOGO - BANNER
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">News/Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            Main Content
+        </section>
+        <aside>
+            AdVERTISEMENT
+        </aside>
+        <footer>
+            copy right
+        </footer>
+    </div>
+</body>
+
+</html>
