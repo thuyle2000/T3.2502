@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <style>
+        table {
+            width: fit-content;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid blue;
+            padding: 5px 10px;
+        }
+
+        td:nth-child(3),
+        td:nth-child(4),
+        td:nth-child(5) {
+            text-align: right;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .header {
+            background-color: brown!important;
+            color: white!important;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2>HTML Table Demo</h2>
+    <hr>
+    <table>
+        <!-- dong 1: chua tieu de cot -->
+        <thead>
+            <tr class="header">
+                <th>STT</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+
+
+        <!-- dong 2-5: chua du lieu -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>BMW</td>
+                <td>1000</td>
+                <td>2</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Audi</td>
+                <td>120</td>
+                <td>3</td>
+                <td>360</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mercedes</td>
+                <td>200</td>
+                <td>1</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lexus</td>
+                <td>300</td>
+                <td>2</td>
+                <td>600</td>
+            </tr>
+        </tbody>
+
+        <!-- dong cuoi cung: chua tong -->
+        <tfoot>
+            <tr>
+                <td colspan="4">Total</td>
+                <td>2160</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

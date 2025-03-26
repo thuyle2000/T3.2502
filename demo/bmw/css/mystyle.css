@@ -1,7 +1,7 @@
 /* khai bao style css dung chung cho tat ca cac trang trong web site */
 
 /* universal selector */
-* {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px;
     color: green;
