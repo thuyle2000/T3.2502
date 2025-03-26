@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>Form Output Demo</h2>
+    <hr>
+
+    <form action="" oninput="amount.value = product.value * quantity.value">
+        <h3>Product Order</h3>
+        <div>
+            <label for="">Select Product</label>
+            <select name="product" id="product">
+                <option value="100">BMW</option>
+                <option value="120">Audi</option>
+                <option value="200">Mercedes</option>
+                <option value="300">Lexus</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Enter Quantity</label>
+            <input type="number" name="quantity" id="quantity" value="2" min="1" max="10">
+        </div>
+
+        <hr>
+        <div>
+            <label for="">Amount</label>
+            <output name="amount" for="product quantity"></output>
+        </div>
+    </form>
+
+
+
+    <form action="" >
+        <h3>Product Order (version 2)</h3>
+        <div>
+            <label for="">Select Product</label>
+            <select name="product" id="product">
+                <option value="100">BMW</option>
+                <option value="120">Audi</option>
+                <option value="200">Mercedes</option>
+                <option value="300">Lexus</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Enter Quantity</label>
+            <input type="number" name="quantity" id="quantity" value="2" min="1" max="10">
+        </div>
+
+        <div>
+            <button type="button" onclick="amount.value = product.value * quantity.value">Order</button>
+        </div>
+        <hr>
+        <div>
+            <label for="">Amount</label>
+            <output name="amount" for="product quantity"></output>
+        </div>
+    </form>
+</body>
+</html>
