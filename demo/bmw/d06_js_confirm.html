@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script>
+        function myFunction() {
+            let r = confirm("Are u sure ???");
+            if (r == true) {
+                window.close();
+            } else {
+                alert("You select Cancel!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>JS Confirm()</h2>
+    <hr>
+    <p>Click the button to close your Window.</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+</body>
+</html>

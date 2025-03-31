@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script>
+        function myFunction() {
+            alert("Hello! I am an alert box!");
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector("button").addEventListener("click", myFunction);
+        });
+    </script>
+</head>
+<body>
+    <h2>JS Alert()</h2>
+    <hr>
+    <p>Click the button to display an alert box.</p>
+    <button type="button">Try it</button>
+</body>
+</html>
