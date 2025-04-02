@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular-experssion</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value.trim();
+            var fname = document.getElementById("fname").value.trim();
+            var pass = document.getElementById("pass").value.trim();
+            var pass2 = document.getElementById("pass2").value.trim();
+
+            // Regular expression for email validation
+            var emailPattern = /^[a-z0-9][a-z0-9._-]+@[a-z0-9]+(\.[a-z]{2,})+$/i;
+            if (!emailPattern.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+
+            // Regular expression for full name validation
+            var namePattern = /^[a-zA-Z\s]+$/;
+            if (!namePattern.test(fname)) {
+                alert("Full name can only contain letters and spaces");
+                return false;
+            }
+
+            // Password length check
+            if (pass.length < 3) {
+                alert("Password must be at least 3 characters long");
+                return false;
+            }
+
+            // Password confirmation check
+            if (pass !== pass2) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true; // Form is valid
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Regular expression demo</h3>
+    <hr>
+    <form action="d06_track.html" onsubmit="return validateForm()">
+        <h3>Register</h3>
+        <div>
+            <label for="email">email</label><br>
+            <input type="text" id="email" name="email" 
+            value="abc@gmail.com" required><br>
+        </div>
+        <div>
+            <label for="fname">full name</label><br>
+            <input type="text" id="fname" name="fname" 
+            value="Tran Binh Trong" required><br>
+        </div>
+
+        <div>
+            <label for="pass">password</label><br>
+            <input type="password" id="pass" name="pass" 
+            value="123" required><br>
+        </div>
+        <div>
+            <label for="pass2">password confirm</label><br>
+            <input type="password" id="pass2" name="pass2" 
+            value="123" required><br>
+        </div>
+        
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</body>
+</html>
