@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script>
+        function display() {
+            let uname = document.getElementById("uname").value.trim();
+            let pass = document.getElementById("pass").value.trim();
+            let country = document.getElementById("country").value.trim();
+
+            let arr = []; // Create an empty array 
+
+            arr.push(`username is ${uname}`); // Add a new element to the array
+            arr.push(`password is ${pass}`); 
+            arr.push(`country is ${country}`); 
+            
+            let str = "Your info: \n" + arr.join("\n"); // Join the array elements into a string
+
+            alert(str); // Display the array values in an alert box
+            
+            return false; // Prevent form submission for demonstration purposes
+        }
+    </script>
+</head>
+<body>
+    <h2>Array Demo</h2>
+    <hr>
+    <form action="" onsubmit="return display()">
+        <h3>Sign-in</h3>
+        <div>
+            <label for="uname">username</label><br>
+            <input type="text" id="uname" name="uname" 
+            value="Nguyen Du" required><br>
+        </div>
+        <div>
+            <label for="country">country</label> <br>
+            <select name="country" id="country" required>
+                <option value="VN">Vietnam</option>
+                <option value="CH">China</option>
+                <option value="TL">ThaiLan</option>
+                <option value="US" selected>United States</option>
+            </select>
+        </div>
+        <div>
+            <label for="pass">password</label><br>
+            <input type="password" id="pass" name="pass" 
+            value="123" required><br>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</body>
+</html>
