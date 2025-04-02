@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parseInt-Float</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+
+</head>
+
+<body>
+<h3>JS parseInt() - parseFloat()</h3>
+    <hr>
+    <p>Click the button to enter your expression</p>
+    <button type="button" onclick="myFunction()">Casio</button>
+    <p id="demo" style="color: black;"></p>
+    <script>
+        function myFunction() {
+            let x = prompt("Please enter the first number", "12.5");
+            let y = prompt("Please enter the second number", "27.5");
+            if (x == null || x == "") {
+                document.getElementById("demo").innerHTML = "User cancelled input the first number.";
+
+            } else if (y == null || y == "") {
+                document.getElementById("demo").innerHTML = "User cancelled input the second number.";
+
+            } else if(isNaN(x) || isNaN(y)) {
+                document.getElementById("demo").innerHTML = "User input is not a number.";
+
+            } else {
+                // let result = x+y; // string concatenation
+                // let result = parseInt(x) + parseInt(y);
+                let result = parseFloat(x) + parseFloat(y); // float addition
+
+                document.getElementById("demo").innerHTML = `${x} + ${y} = ${result}`;
+            } 
+        }
+    </script>
+
+
+    <p>Note: The eval() function evaluates JavaScript code represented as a string.</p>
+</body>
+
+</html>

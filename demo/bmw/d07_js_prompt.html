@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <h2>Javascript Prompt()</h2>
+    <hr>
+    <p>Click the button to enter your expression</p>
+    <button type="button" onclick="myFunction()">Casio</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            let x = prompt("Please enter your expression", "2+15-4*3/2");
+            if (x == null || x == "") {
+                document.getElementById("demo").innerHTML = "User cancelled the prompt.";
+            } else {
+                let result = eval(x);
+                document.getElementById("demo").innerHTML= `${x} = ${result}`;
+            }
+        }
+    </script>
+    <p>Note: The eval() function evaluates JavaScript code represented as a string.</p>
+</body>
+</html>
