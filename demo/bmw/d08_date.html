@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <h2>javascript Date Demo</h2>
+    <hr>
+
+    <form action="">
+        <label for="date">Enter your birthday (YYYY-MM-DD):</label><br>
+        <input type="date" id="dob" name="dob" value="2010-08-15" required><br><br>
+        <button type="submit">Submit</button>
+
+        
+    </form>
+    <p id="result"></p>
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the value of the date input
+        var dob = document.getElementById("dob").value;
+        var date = new Date(dob);
+
+        let today = new Date();
+        let age = today.getFullYear() - date.getFullYear();
+        if(age <18){
+            alert("You are not old enough to access this page.");
+            return;
+        }else{
+            alert("You are old enough to access this page.");
+        }
+
+
+        // Display the date in different formats
+        let a = [];
+        a.push("<h3>Date Operations</h3>");
+        a.push(`Date: ${date}<br>`);
+        a.push(`Date (ISO String): ${date.toISOString()}<br>`);
+        a.push(`Date (Locale String): ${date.toLocaleString()}<br>`);
+        a.push(`Date (UTC String): ${date.toUTCString()}<br>`);
+        a.push(`Year: ${date.getFullYear()}<br>`);
+        a.push(`Month: ${date.getMonth() + 1}<br>`); // Months are zero-based
+        a.push(`Day: ${date.getDate()}<br>`);
+
+        a.push(`Hours: ${date.getHours()}<br>`);
+        a.push(`Minutes: ${date.getMinutes()}<br>`);
+        a.push(`Seconds: ${date.getSeconds()}<br>`);
+        a.push(`Milliseconds: ${date.getMilliseconds()}<br>`);
+
+        a.push(`Time: ${date.getTime()}<br>`);
+        a.push(`Timezone Offset: ${date.getTimezoneOffset()} minutes<br>`);
+        a.push(`Day of the Week: ${date.getDay()}<br>`);
+        a.push(`Date String: ${date.toDateString()}<br>`);
+        a.push(`Time String: ${date.toTimeString()}<br>`);
+        a.push(`Locale Date String: ${date.toLocaleDateString()}<br>`);
+        a.push(`Locale Time String: ${date.toLocaleTimeString()}<br>`);
+        a.push(`UTC Date String: ${date.toUTCString()}<br>`);
+        a.push(`UTC Time String: ${date.toUTCString()}<br>`);
+        a.push(`Date Now: ${Date.now()}<br>`);
+
+
+        // Display the result in the paragraph element
+        document.getElementById("result").innerHTML = a.join("");
+
+
+        
+
+    });
+</script>
+</html>
