@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <h2>Javascript String Demo</h2>
+    <hr>
+    <button type="button" onclick="stringDemo()"> String Demo </button>
+
+</body>
+<script>
+    function stringDemo() {
+        // String
+        var str = "Hello World! ";
+        var str2 = "How are you? ";
+        var str3 = "I am fine. ";
+
+        document.write("<h3>String Operations</h3>");
+        document.write(`str = ${str}<br>`);
+        document.write(`str2 = ${str2}<br>`);
+        document.write(`str3 = ${str3}<br>`);
+
+        document.write("<h3>String Concatenation</h3>");
+        document.write("Concatenation: " + str.concat(str2, str3) + "<br><br>");
+
+        document.write(`str = ${str} <br>`);
+        document.write(`Length : ${str.length}  <br>`);
+        document.write(`Uppercase: ${str.toUpperCase()} <br>`);
+        document.write(`Lowercase:  ${str.toLowerCase()} <br>`);
+        document.write(`Substring(0,5):  ${str.substring(0, 5)} <br>`);
+        document.write(`Substring(5):  ${str.substring(5)} <br>`);
+        document.write(`Index of 'World':  ${str.indexOf("World")} <br>`);
+        document.write(`Last Index of 'o': ${str.lastIndexOf("o")} <br>`);
+        document.write(`String Split: ${str.split(" ")} <br>`);
+        document.write(`String Replace: ${str.replace("World", "BMW")} <br>`);
+        document.write(`String Trim: ${str.trim()} <br>`);
+        document.write(`String CharAt(0): ${str.charAt(0)} <br>`);
+        document.write(`String CharCodeAt(0): ${str.charCodeAt(0)} <br>`);
+        document.write(`String EndsWith('!'): ${str.endsWith("!")} <br>`);
+    }
+</script>
+
+</html>
