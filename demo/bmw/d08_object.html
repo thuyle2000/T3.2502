@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript Object Demo</h2>
+    <hr>
+</body>
+
+<!-- ma kich ban javascript -->
+<script>
+    //Cach 1:  tao doi tuong Student tu Object    
+    var Student = new Object();
+
+    //cac thuoc tinh cua doi tuong Student
+    Student.name = "Nguyen Du";
+    Student.age = 20;
+    Student.country = "VN";
+
+    //cac phuong thuc cua doi tuong Student
+    Student.display = function () {
+        alert(" *** Thong tin sinh vien *** \n" +
+            "name: " + this.name + "\n" +
+            "age: " + this.age + "\n" +
+            "country: " + this.country);
+    }
+
+    //goi phuong thuc display cua doi tuong Student
+    Student.display();
+
+
+
+    //Cach 2: tao doi tuong Employee tu constructor function (template)
+    // 2a. Constructor function
+    function Employee(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+
+        this.display = function () {
+            alert(" *** Thong tin nhan vien *** \n" +
+                "name: " + this.name + "\n" +
+                "age: " + this.age + "\n" +
+                "salary: " + this.salary);
+        }
+    }
+    // 2b. Tao doi tuong Employee tu constructor function
+    var emp1 = new Employee("Nguyen Van A", 30, 1000);
+    var emp2 = new Employee("Nguyen Van B", 25, 2000);
+    emp1.display();
+    emp2.display();
+
+
+</script>
+
+</html>
