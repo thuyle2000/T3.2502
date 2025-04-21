@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide-down</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #31027c;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Slide-down Menu demo</h3>
+    <hr>
+    <button onclick="toggleMenu()">☰ Menu</button>
+
+    <div id="dropdownMenu" class="menu">
+        <a href="#">Home</a>
+        <a href="#">Introduction</a>
+        <a href="#">Product</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

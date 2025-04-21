@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clipped Drawer under App Bar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* App bar */
+    .app-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 100%;
+      background-color: #6200ee;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+
+    .app-bar .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    /* Drawer (clipped under app bar) */
+    .drawer {
+      position: fixed;
+      top: 60px; /* under app bar */
+      left: -250px;
+      width: 250px;
+      height: calc(100% - 60px);
+      background-color: #333;
+      color: white;
+      overflow-y: auto;
+      transition: left 0.3s;
+      z-index: 999;
+    }
+
+    .drawer.open {
+      left: 0;
+    }
+
+    .drawer a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #444;
+    }
+
+    .drawer a:hover {
+      background-color: #444;
+    }
+
+    /* Main content */
+    .content {
+      margin-top: 60px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    .content.shift {
+      margin-left: 250px;
+    }
+
+    @media (max-width: 768px) {
+      .content.shift {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- App Bar -->
+<div class="app-bar">
+  <button class="menu-btn" onclick="toggleDrawer()">☰</button>
+  <h1 style="margin: 0; font-size: 20px;">Clipped Navigation Drawer</h1>
+</div>
+
+<!-- Drawer -->
+<div id="drawer" class="drawer">
+  <a href="#">🏠 Home</a>
+  <a href="#">📁 Projects</a>
+  <a href="#">📊 Reports</a>
+  <a href="#">⚙️ Settings</a>
+</div>
+
+<!-- Main Content -->
+<div id="mainContent" class="content">
+  <h2>Main Content Area</h2>
+  <p>This drawer starts below the app bar, making it appear "clipped" under the top bar.</p>
+</div>
+
+<script>
+  function toggleDrawer() {
+    const drawer = document.getElementById('drawer');
+    const mainContent = document.getElementById('mainContent');
+    drawer.classList.toggle('open');
+    mainContent.classList.toggle('shift');
+  }
+</script>
+
+</body>
+</html>

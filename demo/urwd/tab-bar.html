@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tab Bar Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Tab bar container */
+    .tab-bar {
+      display: flex;
+      background-color: #6200ee;
+      color: white;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 14px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tab:hover {
+      background-color: yellow;
+    }
+
+    .tab.active {
+      background-color: red;
+      font-weight: bold;
+    }
+
+    /* Content */
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Tab Bar -->
+<div class="tab-bar">
+  <div class="tab active" onclick="showTab(0)">🏠 Home</div>
+  <div class="tab" onclick="showTab(1)">📄 About</div>
+  <div class="tab" onclick="showTab(2)">📞 Contact</div>
+</div>
+
+<!-- Tab Contents -->
+<div class="tab-content active">
+  <h2>Welcome to Home</h2>
+  <p>This is the home page content.</p>
+</div>
+<div class="tab-content">
+  <h2>About Us</h2>
+  <p>This section contains information about us.</p>
+</div>
+<div class="tab-content">
+  <h2>Contact</h2>
+  <p>Contact us at: example@email.com</p>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function showTab(index) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle('active', i === index);
+      contents[i].classList.toggle('active', i === index);
+    });
+  }
+</script>
+
+</body>
+</html>

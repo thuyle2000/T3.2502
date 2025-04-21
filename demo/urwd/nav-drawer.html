@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-height Navigation Drawer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Drawer style */
+        .drawer {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #111;
+            color: white;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .drawer a {
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+        .drawer a:hover {
+            background-color: #575757;
+        }
+
+        /* Open button */
+        .open-btn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            margin: 10px;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 0;
+            transition: margin-left 0.3s;
+            padding: 20px;
+        }
+
+        .drawer.open {
+            left: 0;
+        }
+
+        .main.shift {
+            margin-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Drawer -->
+    <div id="drawer" class="drawer">
+        <a href="#">🏠 Home</a>
+        <a href="#">📁 Projects</a>
+        <a href="#">📊 Reports</a>
+        <a href="#">⚙️ Settings</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="main" id="mainContent">
+        <button class="open-btn" onclick="toggleDrawer()">☰ Menu</button>
+        <h2>Full-height Navigation Drawer Example</h2>
+        <p>This is your main content area.</p>
+    </div>
+
+    <script>
+        function toggleDrawer() {
+            document.getElementById("drawer").classList.toggle("open");
+            document.getElementById("mainContent").classList.toggle("shift");
+        }
+    </script>
+
+</body>
+
+</html>

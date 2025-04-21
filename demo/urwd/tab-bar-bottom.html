@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bottom Tab Bar Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-bottom: 60px; /* space for tab bar */
+    }
+
+    /* Content for each tab */
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Bottom tab bar */
+    .bottom-tab-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background-color: #6200ee;
+      color: white;
+      height: 60px;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .tab-item {
+      flex: 1;
+      text-align: center;
+      padding: 6px 0;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .tab-item i {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+
+    .tab-item.active {
+      background-color: #3700b3;
+    }
+  </style>
+
+  <!-- Font Awesome Icons CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Tab Contents -->
+<div id="tab-home" class="tab-content active">
+  <h2>🏠 Home</h2>
+  <p>This is the Home tab content.</p>
+</div>
+
+<div id="tab-search" class="tab-content">
+  <h2>🔍 Search</h2>
+  <p>This is the Search tab content.</p>
+</div>
+
+<div id="tab-settings" class="tab-content">
+  <h2>⚙️ Settings</h2>
+  <p>This is the Settings tab content.</p>
+</div>
+
+<!-- Bottom Tab Bar -->
+<div class="bottom-tab-bar">
+  <div class="tab-item active" onclick="switchTab(0)">
+    <i class="fas fa-home"></i>
+    Home
+  </div>
+  <div class="tab-item" onclick="switchTab(1)">
+    <i class="fas fa-search"></i>
+    Search
+  </div>
+  <div class="tab-item" onclick="switchTab(2)">
+    <i class="fas fa-cog"></i>
+    Settings
+  </div>
+</div>
+
+<script>
+  function switchTab(index) {
+    const contents = document.querySelectorAll('.tab-content');
+    const tabs = document.querySelectorAll('.tab-item');
+
+    contents.forEach((c, i) => c.classList.toggle('active', i === index));
+    tabs.forEach((t, i) => t.classList.toggle('active', i === index));
+  }
+</script>
+
+</body>
+</html>
